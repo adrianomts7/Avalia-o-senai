@@ -1,0 +1,31 @@
+programa {
+  funcao inicio() {
+    // Declarando variaveis
+    real kg_de_maca,kg_de_morangos, desconto, total, dct
+    
+  
+    // Pedindo dados ao usuario
+    escreva("Quantos kg de Maçã você pegou: ")
+    leia(kg_de_maca)
+
+    escreva("Quantos Kg de morangos você pegou: ")
+    leia(kg_de_morangos)
+
+     
+    
+    se(kg_de_maca + kg_de_morangos < 5 ){
+      total = kg_de_maca * 1.80 + kg_de_morangos * 2.50
+    
+    }senao se(kg_de_maca + kg_de_morangos > 5)
+      total = kg_de_maca * 1.50 + kg_de_morangos * 2.20
+    
+    senao se(kg_de_maca + kg_de_morangos > 8 ou total > 25)
+      desconto = (kg_de_maca * 1.50 + kg_de_morangos * 2.20) 
+      total = desconto - (desconto * 10 / 100)
+      
+      escreva("O Total de sua compra R$ ",total)
+      
+    
+  }
+
+}

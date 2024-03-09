@@ -1,0 +1,28 @@
+programa {
+  funcao inicio() {
+    // Pedindo dados ao usuario
+    real primeira_nota, segunda_nota, media
+    
+    
+   escreva("Digite a primeira nota: ")
+   leia(primeira_nota)
+
+   escreva("Digite a segunda nota: ")
+   leia(segunda_nota)
+   
+   
+   // Calculando a média
+    media = (primeira_nota + segunda_nota) / 2
+
+    // Exibindo resultados ao usuario
+    se(media >= 6)
+    escreva("Parabéns o aluno está aprovado")
+    
+    senao se( media < 3 )
+    escreva("Aluno está em Reprovado")
+    
+    senao{
+    escreva("O aluno está em Recuperação")
+    }
+  }
+}

@@ -1,0 +1,36 @@
+programa {
+  funcao inicio() {
+    cadeia nome_do_produto
+    real preco_unitario, quantidade, total,total_a_pagar,desconto
+
+    escreva("Qual o nome do produto: ")
+    leia(nome_do_produto)
+
+    escreva("Qual preço do produto: ")
+    leia(preco_unitario)
+
+    escreva("Quantos produtos você pegou: ")
+    leia(quantidade)
+
+    total = quantidade * preco_unitario
+    
+      se (quantidade < 5){
+      desconto = total - (total * 2 / 100)
+      total_a_pagar = desconto
+      
+
+      }senao se( 5 >  quantidade < 10){
+        desconto = total - (total * 3 / 100)
+        total_a_pagar = desconto
+      
+
+      }senao se (quantidade > 10)
+        desconto = total - (total * 10 / 100)
+        total_a_pagar = desconto
+      
+
+    
+  
+  escreva("O seu produto: ",nome_do_produto, "\nNo preço de R$ ", preco_unitario, "\nTotal: R$ ", total_a_pagar)
+  }
+}

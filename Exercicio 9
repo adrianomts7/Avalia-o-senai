@@ -1,0 +1,25 @@
+programa {
+  funcao inicio() {
+    inteiro renda,emprestimo,prestacao,minimo,condicao
+
+    escreva("Qual a sua renda: ")
+    leia(renda)
+  
+    escreva("Quanto de emprestimo deseja pegar: ")
+    leia(emprestimo)
+
+    escreva("Em quantas prestações deseja pagar o emprestimo: ")
+    leia(prestacao)
+
+    minimo = renda * 30 / 100
+    
+    se(emprestimo > renda * 10 e prestacao <= minimo)
+    escreva("Emprestimo Concedido")
+
+    senao{
+      escreva("Emprestimo Negado")
+    }
+       
+  
+  }
+}

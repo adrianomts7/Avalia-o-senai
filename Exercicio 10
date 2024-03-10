@@ -1,0 +1,41 @@
+programa {
+  funcao inicio() {
+    cadeia combustivel
+    real gasolina,alcool,preco,quantidade,total,desconto
+
+    escreva("-=-=Combustiveis-=-=")
+    escreva("\nTipo \t\t\t\tPreço")
+    escreva("\nGasolina \t\tR$ 6.59")
+    escreva("\nÁlcool \t\t\tR$ 3.79")
+    escreva("\nQual combustivel deseja abastecer: ")
+    leia(combustivel)
+    escreva("\nDeseja abastecer Quantos litros: ")
+    leia(quantidade)
+
+    escolha(combustivel){
+      caso "G":
+      combustivel = "Gasolina"
+      preco = 6.59
+      se(quantidade <= 25)
+      preco = preco - (preco * 3 / 100)
+      total = preco * quantidade
+      se(quantidade > 25)
+      preco = preco - (preco * 5 / 100)
+      total = quantidade * preco
+      pare
+      
+      caso "A":
+      combustivel = "Álcool"
+      preco = 3.79 
+      se(quantidade <= 25)
+      preco = preco - (preco * 2 / 100)
+      total = quantidade * preco
+      se(quantidade > 25)
+      preco = preco - (preco * 4 / 100)
+      total = quantidade * preco
+      pare
+    }
+    escreva("Você comprou o combustivel: ", combustivel, quantidade, " ", " Litros", "\nNo total R$ ",total)
+
+  }
+}
